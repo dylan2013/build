@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "fire": "g build;cd ..;firebase deploy"
+    "f": "ng build;cd ..;firebase deploy"
   },
   "private": true,
   "dependencies": {
