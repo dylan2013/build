@@ -14,12 +14,12 @@
     <script src="js/gadget.js"></script>
     <script>
         init({
-            application: "j.kh.edu.tw",            
-            paramValues: {                                
+            application: "j.kh.edu.tw",
+            paramValues: {
             },
             oAuth: {
                 clientID: 'b88fbfbbaa848c5b5b01ce51853eac7f',
-                clientSecret: '0911245ae08323086790244cd319c1c3bbde1096520154f0cbcb71f0ff76e311',                
+                clientSecret: '0911245ae08323086790244cd319c1c3bbde1096520154f0cbcb71f0ff76e311',
                 //account: '',
                 //password: window.prompt('password:')
             }
@@ -74,41 +74,42 @@
 <body ng-controller="MainCtrl">
     <div ng-if="!Loaded"
          style="position:absolute;top:50%;left:50%;margin-top:-20px;margin-left:-50px;">Loading...</div>
+         <h1>篩選</h1>
     <table class="table table-bordered table-striped"
-           style="width:260px;">        
+           style="width:400px;">
         <thead>
             <tr>
-                <th>school_name</th>
-                <th>school_id</th>
-                <th>student_number</th>
-                <th>class_name</th>
-                <th>student_birthday</th>
+                <th>學校名稱</th>
+                <th>學校前置詞</th>
+                <th>學號</th>
+                <th>班級</th>
+                <th>生日</th>
                 <th>class_class_no</th>
-                <th>student_id</th>
-                <th>class_display_order</th>
-                <th>school_dsns</th>
-                <th>student_gender</th>
-                <th>class_grade_year</th>
-                <th>student_id_number</th>
-                <th>student_name</th>
+                <th>學生系統編號</th>
+                <th>班級序號</th>
+                <th>學校登入位置</th>
+                <th>性別</th>
+                <th>年級</th>
+                <th>身分證號</th>
+                <th>姓名</th>
                 <th>student_ref_class_id</th>
-                <th>student_seat_no</th>
-                <th>student_status_code</th>
+                <th>座號</th>
+                <th>學生狀態</th>
                 <th>student_id_number_sha256</th>
-                <th>student_gender_base64</th>
+                <th>性別</th>
                 <th>student_name_base64</th>
-                <th>sync_trigger_action</th>
-                <th>sync_trigger_time</th>
-                <th>sync_excute_time</th>
-                <th>sync_action1</th>
-                <th>sync_action2</th>
-                <th>sync_action3</th>
-                <th>sync_action_result1</th>
-                <th>sync_action_result2</th>
-                <th>sync_action_result3</th>
+                <th>更新狀態</th>
+                <th>開始更新時間</th>
+                <th>執行時間</th>
+                <th>更新階段1</th>
+                <th>更新階段2</th>
+                <th>更新階段3</th>
+                <th>回傳階段1</th>
+                <th>回傳階段2</th>
+                <th>回傳階段3</th>
                 <th>student_reversion_id</th>
             </tr>
-        </thead>        
+        </thead>
         <tbody>
             <tr ng-repeat="OpenIDLogRec in OpenIDLogList"  class="text-left">
                 <td>{{OpenIDLogRec.school_name}}</td>
